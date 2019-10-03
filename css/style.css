@@ -8,6 +8,12 @@ body {
   font-family: "ProductSans";
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 body {
@@ -32,24 +38,29 @@ body {
 h1 {
   text-align: center;
   color: #000;
-  font-size: 7em;
+  font-size: 84px;
   margin-bottom: -20px;
+  width: auto;
 }
 
 h3 {
-  text-align: end;
+  text-align: right;
   color: #000;
-  margin-right: 80px;
-  margin-bottom: 6%;
+  margin: 10px;
+  padding-right: 60px;
 }
 
 .card {
   background-color: #fff;
   border-radius: 15px;
-  width: 45%;
-  margin: auto;
-  display: block;
-  margin-top: 10%;
+  max-width: 500px;
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  margin: 2rem;
   padding: 1px 10px 60px 10px;
   box-shadow: 100px;
 }
@@ -75,12 +86,31 @@ h3 {
 }
 .searchbar {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 26px;
   font-family: "ProductSans";
   border: solid rgba(0, 0, 0, 0.24);
   padding: 10px;
-  width: 550px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 535px) {
+  .card {
+    margin: 20px;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  h3 {
+    padding-right: 30px;
+    margin-top: 20px;
+  }
+
+  .searchbar {
+    font-size: 18px;
+  }
 }
